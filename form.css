@@ -1,0 +1,384 @@
+/* Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/* @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Sofia+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Alumni+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic); */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  /* overflow-x: hidden; */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  /* margin: 140px; */
+  height: 100svh;
+  max-width: 100%;
+  background-color: #f4f8f8;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* border: 2px solid #000; */
+  height: inherit;
+  padding: 0 100px;
+  align-items: center;
+  /* max-width: 100svh; */
+  /* position: relative; */
+}
+.container > .box_1 {
+  max-width: 34%;
+  height: 275px;
+  position: relative;
+  left: 2em;
+  /* flex-shrink: 0; */
+  border: 2px none #000;
+  /* margin-block-start: 205px; */
+  /* margin-block-end: 360px; */
+  p {
+    margin-top: 10px;
+  }
+}
+.box_1 > img {
+  width: 77.333px;
+  height: 80px;
+  /* flex-shrink: 0; */
+  margin-left: -8px;
+  padding: 0;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+}
+.container > .box_2 {
+  /* width: 40%; */
+  position: relative;
+  right: 4em;
+  padding: 0 55px 20px 20px;
+  border: 2px none black;
+  height: auto;
+
+  /* margin: 0 20px; */
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.3);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 18px;
+  /* 142.857% */
+  letter-spacing: 0.2px;
+}
+.flex_inp {
+  display: flex;
+  flex-direction: column;
+  padding-top: 13px;
+  /* width: inherit */
+}
+.box_2 :where(.flex_1, .flex_2, .flex_3) {
+  display: flex;
+  justify-content: space-between;
+  /* flex-shrink: 1; */
+  /* margin-block-end: 10px; */
+}
+
+label {
+  padding: 8px;
+  position: relative;
+  right: 7px;
+  color: #011c34;
+  font-weight: bold;
+}
+
+input {
+  padding: 8px;
+  width: 120%;
+  border: 1px thin #011c34;
+  &:active,
+  &:hover {
+    border: 2px none #2ec4b6;
+  }
+
+  /* font-weight: bold; */
+}
+
+#first-input {
+  &::placeholder {
+    color: #011c34;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+#first-input:hover,
+#first-input:active {
+  border: 2px solid #2ec4b6;
+}
+
+.box_2 > .flex_3 {
+  display: flex;
+}
+.flex_inp :is(#activity-select-box, .activity-container) {
+  width: 109%;
+
+  /* position: relative; */
+  height: 40px;
+  /* left: 10px; */
+}
+input[type="password"] {
+  width: 109%;
+}
+select {
+  /* padding-right: 50px; */
+  appearance: none;
+  padding: 10px;
+  /* border: 1px thin #011c34; */
+  /* width: 109%; */
+}
+.select-box {
+  width: 16.6em;
+  padding: 10px;
+  height: 40px;
+}
+.flex_inp {
+  svg {
+    width: 4%;
+    height: 40px;
+    /* border: 2px solid black; */
+    position: absolute;
+    /* left: 0px; */
+    right: 10px;
+    /* position: absolute; */
+  }
+}
+:is(.password-container, .activity-container) {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 109%;
+  position: relative;
+}
+.select-container {
+  /* border: 2px solid black; */
+  position: relative;
+  display: flex;
+  /* width: 300px; */
+  /* display:grid; */
+}
+.select-container svg {
+  /* border: 6px solid black; */
+  position: absolute;
+  width: 9%;
+  /* width: 50px; */
+  /* width: auto; */
+}
+.flex_inp :is(.date-container) {
+  width: 120%;
+  /* position: relative; */
+  margin-right: 50px;
+  /* border: 2px solid black; */
+}
+.button {
+  width: 109%;
+  margin-top: 23px;
+  height: 3em;
+  background-color: #2ec4b6;
+  color: #fff;
+  text-align: center;
+  border: none;
+  font-family: Sofia Pro;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  &:hover {
+    cursor: pointer;
+    background-color: #7baaa5;
+  }
+}
+.footer {
+  padding-left: 12.5px;
+  margin-top: 10px;
+  text-align: center;
+  border: none;
+  font-family: Sofia Pro;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  & a {
+    color: #2ec4b6;
+    &:hover {
+      color: #f75f39;
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  body,
+  .container {
+    max-width: 100svh;
+    padding: 0;
+    margin: 0;
+    font-family: sofia;
+    height: auto;
+  }
+  .container {
+    display: block;
+    width: fit-content;
+    padding: 50px;
+    padding-bottom: 80px;
+    & > .box_1 {
+      max-width: 100svh;
+      width: 100%;
+      display: block;
+      position: relative;
+      inset: 0;
+      height: auto;
+      margin: 0 auto;
+      margin-block-end: 30px;
+      img {
+        position: relative;
+        top: -20px;
+      }
+      & p {
+        display: none;
+      }
+      & h2 {
+        display: block;
+        &::after {
+          content: "Inspiring wholesome harmony for the mind, body and spirit, for everyone, everywhere.";
+          display: block;
+          font-family: Sofia Pro;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 18px;
+          /* 142.857% */
+          letter-spacing: 0.2px;
+          color: #011c34;
+          margin-top: 10px;
+        }
+      }
+    }
+    & > .box_2 {
+      display: block;
+      position: relative;
+      inset: 0;
+      max-width: 100svh;
+      width: 100%;
+      margin: 0 auto;
+      bottom: 40px;
+      padding: 20px;
+      padding-top: 5px;
+      padding-bottom:0;
+      height: auto;
+      border: none;
+      border-radius: 0;
+      /* box-shadow: none; */
+      font-family: Sofia Pro;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 18px;
+      /* 142.857% */
+      letter-spacing: 0.2px;
+
+      .flex_1,
+      .flex_2,
+      .flex_3 {
+        display: block;
+        input,
+        select {
+          width: 100%;
+          
+          /* border-style: inset; */
+        }
+      }
+      .flex_inp > .activity-container,
+      #activity-select-box,.password-container {
+        max-width: 100%;
+      }
+      svg{
+        width: 5%;
+      }
+      .button{
+        width: 100%;
+      }
+      .footer{
+        position: relative;
+        top: 50px;
+        font-size: 15px;
+        /* margin-bottom: 10px; */
+      }
+      label{
+        font-size: 13px;
+      }
+    }
+  }
+
+  /*   
+  }
+  .select-box {
+    width: 100%;
+  }
+  .flex_inp {
+    svg {
+      width: 10%;
+      height: auto;
+      right: 0;
+    }
+  }
+  :is(.password-container, .activity-container) {
+    width: 100%;
+  }
+  .select-container {
+    width: 100%;
+  }
+  .select-container svg {
+    width: 15%;
+  }
+  .flex_inp :is(.date-container) {
+    width: 100%;
+    margin-right: 0;
+  }
+  .button {
+    width: 100%;
+  }
+  .footer {
+    padding-left: 0;
+  } */
+}
